@@ -61,8 +61,7 @@ void exit_block()
  */
 void enterblock()
 {
-   fprintf( stderr, "You must write the function 'enterblock' yourself\n" );
-   exit( 1 );
+   level++;
 }
 
 /*
@@ -96,8 +95,9 @@ struct id_entry *install(char *name, int blev)
  */
 void leaveblock()
 {
-   fprintf( stderr, "You must write the function 'leaveblock' yourself\n" );
-   exit( 1 );
+   if (level > 0) {
+      level--;
+   }
 }
 
 /*
